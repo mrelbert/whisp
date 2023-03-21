@@ -4,7 +4,6 @@ import soundfile as sf
 import openai
 
 app = Flask(__name__)
-app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
 @app.route('/')
@@ -30,5 +29,5 @@ def record():
     return render_template('result.html', text=transcript['text'])
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
